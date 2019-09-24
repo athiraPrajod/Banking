@@ -1,0 +1,64 @@
+<html>
+<head>
+  <title>personal banking</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+body,html
+  .bg-image {
+  /* The image used */
+  background-image: url("touch.jpg");
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+<form action="#" method="post">
+<title style="color:white">PER.BANK</title>
+<br>
+<br>
+ <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">PERSONAL BANKING</h1>
+  </div>
+</div>
+<div class="container">         
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th>DATE</th>
+        <th>ACCOUNT NO.</th> 
+        <th>PRESENT AMOUNT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for details in info %}
+        <td>2019/09/11</td>
+        <td>details[1].Account_No</td> 
+        <td>details[1].Curr_Balance</td>
+        {% endfor %}
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+<br>
+<center><a href="{% url 'Transactions' %}" class="btn btn-info" role="button">make a transaction</a></center>
+
+<br>
+<br>
+<marquee class="bg-warning text-body">Avail exciting interest rates only in lens bank.. easy transaction..faster loan approval..flexible interest rate and pay period..experience one of the easiest and comfortable online banking.</marquee>
+</form>
+</body>
+</html>

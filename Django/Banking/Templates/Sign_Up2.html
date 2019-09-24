@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  {% load static %}
+  <head>
+    <title>Sign Up</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Numans");
+      html,
+      body {
+        background-image: url( "{%static "B_App/Login_Background.jpg"%}" );
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        font-family: "Numans", sans-serif;
+      }
+      .register-box {
+        width: 360px;
+        margin: 5% auto;
+      }
+    </style>
+    <!--Bootsrap 4 CDN-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <!--Fontawesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  </head>
+  <body>
+    <center>
+      <h1 style="font-size:700%" ;>
+        <font color="White"><p style="font-family:verdana">LENZ BANK</p></font>
+      </h1>
+      <br />
+      <h3>
+        <font color="White"
+          ><p style="font-family:verdana">
+            <i>Banking focused on you...</i>
+          </p></font
+        >
+      </h3>
+    </center>
+
+    <!--Sign Up-->
+    
+    <div id="register-box" class="container-fluid">
+      <form method = "POST" autocomplete="on">
+        <div class="login-box" , class="container-fluid">
+          <a class="hiddenanchor" id="toregister"></a>
+          <a class="hiddenanchor" id="tologin"></a>
+          <div class="d-flex justify-content-center h-100">
+            <div class="card">
+              <div class="card-header">
+                <h3>Sign Up</h3>
+              </div>
+              <div class="card-body">
+                <form>
+				{% csrf_token %}
+				<!-- Username-->
+                  <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                      </span>
+                    </div>
+            
+                    <input
+                        id="username"
+                        name="username"
+                        required="required"
+                        type="text"
+						class = "form-control"
+                        placeholder="Username"
+                      />
+                  </div>
+                  
+				<!-- Password-->
+				  <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ></span>
+                    </div>
+                    <input
+                      id="password"
+                      name = "password"
+                      type="password"
+                      class="form-control"
+                      placeholder="password"
+                    />
+                  </div>
+
+				<!-- Full Name-->
+				<div class="input-group form-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        >
+					          </span>
+                    </div>
+                    <input
+                      id="FullName"
+					  name = "FullName"
+                      required="required"
+                      type="text"
+		              class="form-control"
+                      placeholder="Full Name"
+                    />
+                  </div>
+				
+				<!-- Email ID-->
+				<div class="input-group form-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        >
+					</span>
+                    </div>
+                    <input
+                      id="E_ID"
+					  name = "E_ID"
+                      required="required"
+                      type="text"
+		      		  class="form-control"
+                      placeholder="email id"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <input
+                      type="submit"
+                      value="Sign Up"
+                      class="btn float-right login_btn"
+                    />
+                  </div>
+                </form>
+              </div>
+              
+	      <div class="card-footer">
+                <div class="d-flex justify-content-center links">
+                  <p class="change_link">
+                    Already a member ?
+                    <a href="{% url 'Login' %}" >Login</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+      </form>
+    </div>
+  </body>
+</html>

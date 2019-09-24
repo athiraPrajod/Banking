@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--{%load staticfiles%}-->
+<html>
+  <head>
+    <title>Login Page</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Numans");
+      html,
+      body {
+        /*background-image: url({%static "/home/athira/Singapore2015/WingsofTime/DSCN0879.JPG"%} alt = "Image Not Found");*/
+        background-image: url("B_App/Login_Background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        font-family: "Numans", sans-serif;
+      }
+      .login-box,
+      .register-box {
+        width: 360px;
+        margin: 5% auto;
+      }
+    </style>
+    <!--Bootsrap 4 CDN-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <!--Fontawesome CDN-->
+    <!--link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    /-->
+
+    <!--Custom styles-->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <center>
+      <h1 style="font-size:700%" ;>
+        <font color="White"><p style="font-family:verdana">LENS BANK</p></font>
+      </h1>
+      <br />
+      <h3>
+        <font color="White"
+          ><p style="font-family:verdana">
+            <i>Banking focused on you...</i>
+          </p></font
+        >
+      </h3>
+    </center>
+    <div class="login-box" , class="container-fluid">
+      <div class="d-flex justify-content-center h-100">
+        <div class="card">
+          <div class="card-header">
+            <h3>Log In</h3>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    ><i class="fas fa-user"></i
+                  ></span>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="username"
+                />
+              </div>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    ><i class="fas fa-key"></i
+                  ></span>
+                </div>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="password"
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="submit"
+                  value="Login"
+                  class="btn float-right login_btn"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex justify-content-center links">
+              Don't have an account?<a href="#">Sign Up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <marquee behavior="scroll" direction="left">
+      <font color="white"
+        >PERSONAL BANKING, MONEY TRANSFERS, TAX PAYMENT.....sensex:39,969.35
+        +130.10 (0.33%)..LOAN>>>personal @10.99% and above.... car loan @9.09%
+        and abv.... student loan @8.45% home loan @ 8.64% and abv. T&C
+        APPLY</font
+      >
+    </marquee>
+  </body>
+</html>
